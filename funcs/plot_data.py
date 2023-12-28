@@ -29,10 +29,11 @@ class GraphWindow():
         plt.addLegend()
         
         # set properties of the label for y axis
-        plt.setLabel('left', 'Vertical Values', units ='y')
+        plt.setLabel('left', 'Closing stock price end of month', units ='$')
         
         # set properties of the label for x axis
-        plt.setLabel('bottom', 'Horizontal Values', units ='s')
+        x_axis_start_date = x_vals[0]
+        plt.setLabel('bottom', 'Day', units ='ends of months since' + x_axis_start_date)
 
         m = [i for i in range(len(x_vals))]
         m_labels = [
@@ -48,7 +49,7 @@ class GraphWindow():
         plt.setYRange(0, max(y_vals) + 5)
         
         # setting window title
-        plt.setWindowTitle(ticker)
+        plt.setWindowTitle('Ticker: ' + ticker)
         
         # ploting line in green color
         line1 = plt.plot(m, y_vals, pen ='g', labels=m_labels, symbol ='x', symbolPen ='g',
