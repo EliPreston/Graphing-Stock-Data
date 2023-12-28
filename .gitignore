@@ -1,0 +1,7 @@
+
+# Ignore folder with random bits
+IGNOREME/
+
+# Ignoring other things
+functions/__pycache__/
+.DS_Store

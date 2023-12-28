@@ -79,35 +79,3 @@ def tsxActiveStocks():
 
 
 
-
-
-
-
-
-# ************DUMP***************
-
-    # 2. https://pypi.org/project/Yahoo-ticker-downloader/
-
-
-    # 3.
-    # import csv
-    # CSV_URL = 'https://www.alphavantage.co/query?function=LISTING_STATUS&apikey='+my_key
-
-    # with requests.Session() as s:
-    #     download = s.get(CSV_URL)
-    #     decoded_content = download.content.decode('utf-8')
-    #     cr = csv.reader(decoded_content.splitlines(), delimiter=',')
-    #     my_list = list(cr)
-
-        # ['symbol', 'name', 'exchange', 'assetType', 'ipoDate', 'delistingDate', 'status']
-        # for row in my_list:
-        #     print(row)
-
-        
-    # try:
-    #     symbol = 'IBM'
-    #     symbol = symbol.replace('\n', '')
-    #     url = 'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=IBM&apikey=demo'
-    #     pickle_data.pickleData(url, symbol)
-    # except Exception as e:
-    #     print("=> Error with request for ticker {}: {}".format(symbol, e))      
