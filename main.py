@@ -1,7 +1,7 @@
 import sys
-import functions.get_data as get_data
-import functions.pickle_data as pickle_data
-import functions.plot_data as plot_data
+import funcs.get_data as get_data
+import funcs.pickle_data as pickle_data
+import funcs.plot_data as plot_data
 
 
 '''
@@ -94,32 +94,54 @@ def checkCLAs() -> None:
         #     validArgs[2] = False
 
 
-    if ((validArgs[0] == False) or (validArgs[1] == False) or (validArgs[2] == False)):
-        print("One or more arguments passed are invalid/incorrect, only 0 or 1 are acceptable.\n")
+        if ((validArgs[0] == False) or (validArgs[1] == False) or (validArgs[2] == False)):
+            print("One or more arguments passed are invalid/incorrect, only 0 or 1 are acceptable.\n")
 
-    # if (validArgs[0] == False):
-    #     update_active_stocks = input("Get most recent list of active TSX stocks? [y/n] ")
-    #     match update_active_stocks.lower():
-    #         case "y":
-    #             get_data.tsxActiveStocks()
-    #         case "n":
-    #             print("Continuing...\n\n")
-    #         case _:
-    #             print("Invalid option, continue with program or ctr+c and start again.\n")
+        # if (validArgs[0] == False):
+        #     update_active_stocks = input("Get most recent list of active TSX stocks? [y/n] ")
+        #     match update_active_stocks.lower():
+        #         case "y":
+        #             get_data.tsxActiveStocks()
+        #         case "n":
+        #             print("Continuing...\n\n")
+        #         case _:
+        #             print("Invalid option, continue with program or ctr+c and start again.\n")
 
-    # if (validArgs[1] == False):
-    #     pickle_all_data = input("Pickle TSX data from alphavantage? [y/n] ")
-    #     match pickle_all_data.lower():
-    #         case "y":
-    #             get_data.getAVData()
-    #         case "n":
-    #             print("Continuing...\n\n")
-    #         case _:
-    #             print("Invalid option, continue with program or ctr+c and start again.\n")
-    
-    # if (validArgs[2] == False):
-    #     chooseOption()
-    
+        # if (validArgs[1] == False):
+        #     pickle_all_data = input("Pickle TSX data from alphavantage? [y/n] ")
+        #     match pickle_all_data.lower():
+        #         case "y":
+        #             get_data.getAVData()
+        #         case "n":
+        #             print("Continuing...\n\n")
+        #         case _:
+        #             print("Invalid option, continue with program or ctr+c and start again.\n")
+        
+        # if (validArgs[2] == False):
+        #     chooseOption()
+
+        
+    else:
+        update_active_stocks = input("Get most recent list of active TSX stocks? [y/n] ")
+        match update_active_stocks.lower():
+            case "y":
+                get_data.tsxActiveStocks()
+            case "n":
+                print("Continuing...\n\n")
+            case _:
+                print("Invalid option, continue with program or ctr+c and start again.\n")
+        
+
+        pickle_all_data = input("Pickle TSX data from alphavantage? [y/n] ")
+        match pickle_all_data.lower():
+            case "y":
+                get_data.getAVData()
+            case "n":
+                print("Continuing...\n\n")
+            case _:
+                print("Invalid option, continue with program or ctr+c and start again.\n")
+        
+        chooseOption()
 
 '''
 Main

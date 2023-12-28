@@ -1,7 +1,9 @@
 
 # Ignore folder with random bits
 IGNOREME/
+*__pycache__
 
 # Ignoring other things
-functions/__pycache__/
 .DS_Store
+stockdata/tester.json
+stockdata/tsx_tickers.txt

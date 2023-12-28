@@ -1,7 +1,7 @@
 import requests
 import sys
-import dontpushme.key as my_api_key
-import functions.pickle_data as pickle_data
+import IGNOREME.key as my_api_key
+import funcs.pickle_data as pickle_data
 
 
 def getAVData(time_specifier: str):
@@ -10,8 +10,8 @@ def getAVData(time_specifier: str):
     # url = 'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=IBM&apikey='+my_api_key.__key__
 
     try:
-        f_tickers = open('data/tsx_tickers.txt', 'r')
-        f_error = open('data/tickers_w_errors.txt', 'a')
+        f_tickers = open('stockdata/tsx_tickers.txt', 'r')
+        f_error = open('stockdata/tickers_w_errors.txt', 'a')
     except Exception as e:
         print("=> Error opening tsx_tickers.txt - check if this file exists in the specified path")
         print("=> Error: {}".format(e))
@@ -61,7 +61,7 @@ def tsxActiveStocks():
         sys.exit(2)
 
     try:
-        f = open('data/tsx_tickers.txt', 'w')
+        f = open('stockdata/tsx_tickers.txt', 'w')
     except Exception as e:
         print("=> Error writing to tsx_tickers.txt")
         print("=> Error: {}".format(e))
@@ -75,7 +75,7 @@ def tsxActiveStocks():
             sys.exit(4)
     f.close()
     
-    print("=> All active/current TSX tickers written to ./data/tsx_tickers.txt\n")
+    print("=> All active/current TSX tickers written to ./stockdata/tsx_tickers.txt\n")
 
 
 

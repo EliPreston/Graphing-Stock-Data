@@ -22,7 +22,7 @@ def pickleData(time_specifier: str, url: str, ticker: str) -> int:
 
     if (time_specifier == "monthly"):
         try:
-            fileNameMonthly = 'data/pickled_data_monthly/pickled_data_monthly_'+ticker+'.bin'
+            fileNameMonthly = 'stockdata/pickled_data_monthly/pickled_data_monthly_'+ticker+'.bin'
             pickleFile = open(fileNameMonthly, 'wb')
             pickledData = pickle.dumps(data)
             pickleFile.write(pickledData)
@@ -33,7 +33,7 @@ def pickleData(time_specifier: str, url: str, ticker: str) -> int:
     
     # elif (time_specifier == "daily"):
     #     try:
-    #         fileNameDaily = 'data/pickled_data_daily/pickled_data_daily_'+ticker+'.bin'
+    #         fileNameDaily = 'stockdata/pickled_data_daily/pickled_data_daily_'+ticker+'.bin'
     #         pickleFile = open(fileNameDaily, 'wb')
     #         pickledData = pickle.dumps(data)
     #         pickleFile.write(pickledData)
@@ -52,7 +52,7 @@ def unPickleMyData(time_specifier: str, ticker: str) -> dict:
     
     if (time_specifier == "monthly"):
         try:
-            pickledFile = open('data/pickled_data_monthly/pickled_data_monthly_'+ticker+'.bin', 'rb')
+            pickledFile = open('stockdata/pickled_data_monthly/pickled_data_monthly_'+ticker+'.bin', 'rb')
             data = pickle.load(pickledFile)
             # print(data)
             pickledFile.close()
@@ -62,7 +62,7 @@ def unPickleMyData(time_specifier: str, ticker: str) -> dict:
             sys.exit(7)
     # elif (time_specifier == "daily"):
     #     try:
-    #         pickledFile = open('data/pickled_data_daily/pickled_data_daily_'+ticker+'.bin', 'rb')
+    #         pickledFile = open('stockdata/pickled_data_daily/pickled_data_daily_'+ticker+'.bin', 'rb')
     #         data = pickle.load(pickledFile)
     #         print(data)
     #         pickledFile.close()

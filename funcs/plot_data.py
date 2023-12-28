@@ -7,7 +7,7 @@ from pyqtgraph.Qt import QtCore, QtGui
 from collections import deque
 from PyQt6 import QtWidgets
 
-import functions.pickle_data as pickle_data
+import funcs.pickle_data as pickle_data
 
 
 # https://pyqtgraph.readthedocs.io/en/latest/getting_started/plotting.html
