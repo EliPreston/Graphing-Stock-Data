@@ -17,7 +17,7 @@ def pickleData(time_specifier: str, url: str, ticker: str) -> int:
     except Exception as e:
         print("Error with url:\n{}".format(e))
         sys.exit(5)
-# https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=TSX:HBD&apikey=9YJCBV2T3359UNA2
+
     print("Pickling data.......")
 
     if (time_specifier == "monthly"):
